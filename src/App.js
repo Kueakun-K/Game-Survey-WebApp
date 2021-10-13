@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
 
-function App() {
+import Page1 from "./Page/question";
+import Page2 from "./Page/question2";
+import Result from './Page/result';
+import Modal from './PopupModel/modal';
+
+export default function App()  {
+  // const [sata,setSata] = React.useState({})
+  // const data = "Hello Everyone";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Router>
+        <Switch>
+          <Route exact path="/" component={Page1} />
+         
+          <Route exact path="/page2" component={Page2} />
+
+          <Route exact path="/result" component={Result} />
+        
+          <Route exact path="/modal" component={Modal}/>
+
+        </Switch>
+        </Router>
     </div>
   );
 }
 
-export default App;
+
