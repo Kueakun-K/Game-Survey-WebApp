@@ -3,43 +3,57 @@ import {useHistory} from "react-router-dom"
 
 const Page1 = () => {
     const history = useHistory()
-    var data = []
+    
     
     function onClick(){
-        var check1 = false;
-        var check2 = false;
-        var q1 = document.forms[0];
-        var txt1 = "";
-        for (var i = 0; i < q1.length; i++) {
-            if (q1[i].checked) {
-            txt1 = q1[i].value;
-            }
-        }
-        if (txt1 === ""){
-            alert("...")
-        }
-        else{
-            check1 = true
+        var data = []
+        var check = []
+        for(var x = 0; x < 6; x++) {
+            data.push("");
+            check.push(false);
         }
 
+        var q1 = document.forms[0];
         var q2 = document.forms[1];
-        var txt2 = "";
-        for (var j = 0; j < q2.length; j++) {
-            if (q2[j].checked) {
-            txt2 = q2[j].value;
+        var q3 = document.forms[2];
+        var q4 = document.forms[3];
+        var q5 = document.forms[4];
+        var q6 = document.forms[5];
+
+        for (var i = 0; i < q1.length; i++) {
+            if (q1[i].checked) {
+                data[0] = q1[i].value;
+            }
+            if (q2[i].checked) {
+                data[1] = q2[i].value;
+            }
+            if (q3[i].checked) {
+                data[2] = q3[i].value;
+            }
+            if (q4[i].checked) {
+                data[3] = q4[i].value;
+            }
+            if (q5[i].checked) {
+                data[4] = q5[i].value;
+            }
+            if (q6[i].checked) {
+                data[5] = q6[i].value;
             }
         }
-        if (txt2 === ""){
-            alert("...")
+
+        for(var y = 0;y < 6;y++){
+            if (data[y] === ""){
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            else{
+                check[y] = true
+            }
         }
-        else{
-            check2 = true
-        }
-        data[0] = txt1
-        data[1] = txt2
-        
-        if ((check1 === true ) && (check2 === true)){
+
+        if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
             console.log(data)
+            console.log(check)
             history.push({
                 pathname: "/page2",
                 state: data
@@ -77,83 +91,134 @@ const Page1 = () => {
                 <div class="card">
                     <span>การตัดสินใจการกระทำของตัวละครตัวเองได้</span>
                     <form>
-                        <input type="radio" id="radio2_1" name="2" value="1"/>
-                        <label for="radio2_1">1</label>
-                        <input type="radio" id="radio2_2" name="2" value="2"/>
-                        <label for="radio2_2">2</label>
-                        <input type="radio" id="radio2_3" name="2" value="3"/>
-                        <label for="radio2_3">3</label>
-                        <input type="radio" id="radio2_4" name="2" value="4"/>
-                        <label for="radio2_4">4</label>
-                        <input type="radio" id="radio2_5" name="2" value="5"/>
-                        <label for="radio2_5">5</label>
+                        <label>
+                            <input type="radio" id="radio1" name="1" value="1" />
+                            <span class="check">1</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio2" name="1" value="2"/>
+                            <span class="check">2</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio3" name="1" value="3"/>
+                            <span class="check">3</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio4" name="1" value="4"/>
+                            <span class="check">4</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio5" name="1" value="5"/>
+                            <span class="check">5</span>
+                        </label>
                     </form>
                 </div>
                 <div><hr/></div>
                 <div class="card">
                     <span>การเล่นผ่านด่านไปเรื่อยๆ</span>
                     <form>
-                        <input type="radio" id="radio3_1" name="3" value="1"/>
-                        <label for="radio3_1">1</label>
-                        <input type="radio" id="radio3_2" name="3" value="2"/>
-                        <label for="radio3_2">2</label>
-                        <input type="radio" id="radio3_3" name="3" value="3"/>
-                        <label for="radio3_3">3</label>
-                        <input type="radio" id="radio3_4" name="3" value="4"/>
-                        <label for="radio3_4">4</label>
-                        <input type="radio" id="radio3_5" name="3" value="5"/>
-                        <label for="radio3_5">5</label>
+                        <label>
+                            <input type="radio" id="radio1" name="1" value="1" />
+                            <span class="check">1</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio2" name="1" value="2"/>
+                            <span class="check">2</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio3" name="1" value="3"/>
+                            <span class="check">3</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio4" name="1" value="4"/>
+                            <span class="check">4</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio5" name="1" value="5"/>
+                            <span class="check">5</span>
+                        </label>
                     </form>
                 </div>
                 <div><hr/></div>
                 <div class="card">
                     <span>การใช้อาวุธต่างๆ ในการต่อสู้</span>
                     <form>
-                        <input type="radio" id="radio4_1" name="4" value="1"/>
-                        <label for="radio4_1">1</label>
-                        <input type="radio" id="radio4_2" name="4" value="2"/>
-                        <label for="radio4_2">2</label>
-                        <input type="radio" id="radio4_3" name="4" value="3"/>
-                        <label for="radio4_3">3</label>
-                        <input type="radio" id="radio4_4" name="4" value="4"/>
-                        <label for="radio4_4">4</label>
-                        <input type="radio" id="radio4_5" name="4" value="5"/>
-                        <label for="radio4_5">5</label>
+                        <label>
+                            <input type="radio" id="radio1" name="1" value="1" />
+                            <span class="check">1</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio2" name="1" value="2"/>
+                            <span class="check">2</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio3" name="1" value="3"/>
+                            <span class="check">3</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio4" name="1" value="4"/>
+                            <span class="check">4</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio5" name="1" value="5"/>
+                            <span class="check">5</span>
+                        </label>
                     </form>
                 </div>
                 <div><hr/></div>
                 <div class="card">
                     <span>การทำมิชชั่นหรือเก็บเควสต่างๆ</span>
                     <form>
-                        <input type="radio" id="radio5_1" name="5" value="1"/>
-                        <label for="radio5_1">1</label>
-                        <input type="radio" id="radio5_2" name="5" value="2"/>
-                        <label for="radio5_2">2</label>
-                        <input type="radio" id="radio5_3" name="5" value="3"/>
-                        <label for="radio5_3">3</label>
-                        <input type="radio" id="radio5_4" name="5" value="4"/>
-                        <label for="radio5_4">4</label>
-                        <input type="radio" id="radio5_5" name="5" value="5"/>
-                        <label for="radio5_5">5</label>
+                        <label>
+                            <input type="radio" id="radio1" name="1" value="1" />
+                            <span class="check">1</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio2" name="1" value="2"/>
+                            <span class="check">2</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio3" name="1" value="3"/>
+                            <span class="check">3</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio4" name="1" value="4"/>
+                            <span class="check">4</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio5" name="1" value="5"/>
+                            <span class="check">5</span>
+                        </label>
                     </form>
                 </div>
                 <div><hr/></div>
                 <div class="card">
                     <span>การเก็บเลเวลและประสบการณ์</span>
                     <form>
-                        <input type="radio" id="radio6_1" name="6" value="1"/>
-                        <label for="radio6_1">1</label>
-                        <input type="radio" id="radio6_2" name="6" value="2"/>
-                        <label for="radio6_2">2</label>
-                        <input type="radio" id="radio6_3" name="6" value="3"/>
-                        <label for="radio6_3">3</label>
-                        <input type="radio" id="radio6_4" name="6" value="4"/>
-                        <label for="radio6_4">4</label>
-                        <input type="radio" id="radio6_5" name="6" value="5"/>
-                        <label for="radio6_5">5</label>
+                        <label>
+                            <input type="radio" id="radio1" name="1" value="1" />
+                            <span class="check">1</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio2" name="1" value="2"/>
+                            <span class="check">2</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio3" name="1" value="3"/>
+                            <span class="check">3</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio4" name="1" value="4"/>
+                            <span class="check">4</span>
+                        </label>
+                        <label>
+                            <input type="radio" id="radio5" name="1" value="5"/>
+                            <span class="check">5</span>
+                        </label>
                     </form>
                 </div>
                 <div><hr/></div>
+                
                 <button onClick={onClick}>Click</button>
             </div>
     );

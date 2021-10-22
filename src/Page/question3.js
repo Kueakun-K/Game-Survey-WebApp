@@ -1,7 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
 
-const Page2 = (data) => {
+const Page3 = (data) => {
     const history = useHistory()
     var data2 = data.location.state
 
@@ -24,26 +24,26 @@ const Page2 = (data) => {
 
         for (var i = 0; i < q1.length; i++) {
             if (q1[i].checked) {
-                data2[6] = q1[i].value;
+                data2[12] = q1[i].value;
             }
             if (q2[i].checked) {
-                data2[7] = q2[i].value;
+                data2[13] = q2[i].value;
             }
             if (q3[i].checked) {
-                data2[8] = q3[i].value;
+                data2[14] = q3[i].value;
             }
             if (q4[i].checked) {
-                data2[9] = q4[i].value;
+                data2[15] = q4[i].value;
             }
             if (q5[i].checked) {
-                data2[10] = q5[i].value;
+                data2[16] = q5[i].value;
             }
             if (q6[i].checked) {
-                data2[11] = q6[i].value;
+                data2[17] = q6[i].value;
             }
         }
         for(var y = 0;y < 6;y++){
-            if (data2[y+6] === ""){
+            if (data2[y+12] === ""){
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
@@ -56,7 +56,7 @@ const Page2 = (data) => {
             console.log(data2)
             console.log(check)
             history.push({
-                pathname: "/page3",
+                pathname: "/result",
                 state: data2
             })
         }
@@ -64,7 +64,7 @@ const Page2 = (data) => {
     return(
         <div class="content">
                 <div class="card">
-                    <span class="span">การต่อสู้</span>
+                    <span class="span">ลุ้นระทึก</span>
                     <form>
                         <label>
                             <input type="radio" id="radio1_1" name="1" value="1" />
@@ -90,7 +90,7 @@ const Page2 = (data) => {
                 </div>
                 <div ><hr/></div>
                 <div class="card">
-                    <span>การต่อสู้แบบตัวต่อตัว</span>
+                    <span>การเอาชีวิตรอด</span>
                     <form>
                         <label>
                             <input type="radio" id="radio1" name="1" value="1" />
@@ -116,7 +116,7 @@ const Page2 = (data) => {
                 </div>
                 <div><hr/></div>
                 <div class="card">
-                    <span>การวางแผน</span>
+                    <span>ตัวละครมีสกิลพิเศษ</span>
                     <form>
                         <label>
                             <input type="radio" id="radio1" name="1" value="1" />
@@ -142,7 +142,7 @@ const Page2 = (data) => {
                 </div>
                 <div><hr/></div>
                 <div class="card">
-                    <span>เวลาในการเล่น</span>
+                    <span>เล่นเป็นทีม</span>
                     <form>
                         <label>
                             <input type="radio" id="radio1" name="1" value="1" />
@@ -168,7 +168,7 @@ const Page2 = (data) => {
                 </div>
                 <div><hr/></div>
                 <div class="card">
-                    <span>ฝึกกระบวนการคิด</span>
+                    <span>กราฟฟิคสวยงาม</span>
                     <form>
                         <label>
                             <input type="radio" id="radio1" name="1" value="1" />
@@ -194,7 +194,7 @@ const Page2 = (data) => {
                 </div>
                 <div><hr/></div>
                 <div class="card">
-                    <span>เกี่ยวกับกีฬา</span>
+                    <span>การผจญภัย</span>
                     <form>
                         <label>
                             <input type="radio" id="radio1" name="1" value="1" />
@@ -223,4 +223,4 @@ const Page2 = (data) => {
             </div>
     );
 }
-export default Page2;
+export default Page3;

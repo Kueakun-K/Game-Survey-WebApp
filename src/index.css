@@ -6,7 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:black !important;
+  background: rgba(37, 37, 37, 1);
+  margin-top: 100px;
+  overflow-y: scroll;
 }
 
 code {
@@ -16,26 +18,28 @@ code {
 
 .content {
   display: block;
-  width: 40vw;
+  width: 800px;
   min-width: 70px;
   margin: auto;
-  background-color: black;
-  margin-top: 20px;
   height: fit-content;
-  border: white;
-  border-style: solid;
+  /* border: white;
+  border-style: solid; */
   color: white;
 }
 
 .card {
   text-align: center;
-  margin: 20px;
+  margin: 40px;
   font-size: 20px;
+  /* border: white;
+  border-style: solid; */
 }
+
+/*Question Page*/
 
 input[type=radio]{
   position: absolute;
-  visibility: hidden;
+  visibility: hidden; 
 }
 
 form {
@@ -72,4 +76,107 @@ label input:checked ~ .check{
 
 .span {
   padding-left: 25px;
+}
+
+/*Main Page*/
+.card p {
+  font-size: 40px;
+  /* padding-top: 60px; */
+}
+
+.card a{
+  text-decoration: none;
+  background: rgba(201, 45, 45, 1);
+  color: white;
+  /* margin: 15px; */
+  padding: 15px 25px 15px 25px;
+}
+
+.frame1{
+  height: 200px;
+  color:#eee;
+  font-size: 50px;
+  background-image: url("./pic/frame1pic.jpeg");
+  text-align: center;
+  margin-top: 100px;
+}
+
+input[type=text]{
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/*Contact Page*/
+
+.contact{
+  
+  height:400px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+}
+/*Picture IN contact*/
+.imagesCT img{
+   width: 200px;
+   height: 200px;
+   display: flex;
+   border-radius: 7%;
+   transition: 2s; /*hover*/
+   margin: auto;
+
+}
+.imagesCT img:hover{
+  transform: scale(1.2);
+}
+
+/*ICON FB IG GM IN contact*/
+.contentCT{ 
+  height: 50px;
+  display: flex;
+  gap:40px;
+  margin-top: 25px;
+  margin-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentCT img{
+  height: 50px;
+  width: 50px;
+}
+/*NAME IN contact*/
+.fontNameCT{
+
+  margin-bottom: auto;
+  margin-top: 40px;
+  font-size: 25px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

@@ -7,7 +7,7 @@ const Result = (data) =>{
     
 return(
     <div>
-        <span>{result}</span>
+        <span style={{color: "white"}}>{result}</span>
     </div>
 );
 }
