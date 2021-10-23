@@ -1,6 +1,12 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
 
+import e1 from "../pic/e1n.png"
+import e2 from "../pic/e2n.png"
+import e3 from "../pic/e3n.png"
+import e4 from "../pic/e4n.png"
+import e5 from "../pic/e5n.png"
+
 const Page1 = () => {
     const history = useHistory()
     
@@ -66,24 +72,24 @@ const Page1 = () => {
                     <span class="span">การสวมบทบาทเป็นตัวละครในเกม</span>
                     <form>
                         <label>
-                            <input type="radio" id="radio1_1" name="1" value="1" />
-                            <span class="check">1</span>
+                            <input type="radio" id="radio1_1" name="1" value="1"/>
+                            <img src={e1} alt="e1"></img>
                         </label>
                         <label>
                             <input type="radio" id="radio1_2" name="1" value="2"/>
-                            <span class="check">2</span>
+                            <img src={e2} alt="e2"></img>
                         </label>
                         <label>
                             <input type="radio" id="radio1_3" name="1" value="3"/>
-                            <span class="check">3</span>
+                            <img src={e3} alt="e3"></img>
                         </label>
                         <label>
                             <input type="radio" id="radio1_4" name="1" value="4"/>
-                            <span class="check">4</span>
+                            <img src={e4} alt="e4"></img>
                         </label>
                         <label>
                             <input type="radio" id="radio1_5" name="1" value="5"/>
-                            <span class="check">5</span>
+                            <img src={e5} alt="e5"></img>
                         </label>
                     </form>
                 </div>
@@ -92,24 +98,24 @@ const Page1 = () => {
                     <span>การตัดสินใจการกระทำของตัวละครตัวเองได้</span>
                     <form>
                         <label>
-                            <input type="radio" id="radio1" name="1" value="1" />
-                            <span class="check">1</span>
+                            <input type="radio" id="radio1_1" name="1" value="1"/>
+                            <img src={e1} alt="e1"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio2" name="1" value="2"/>
-                            <span class="check">2</span>
+                            <input type="radio" id="radio1_2" name="1" value="2"/>
+                            <img src={e2} alt="e2"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio3" name="1" value="3"/>
-                            <span class="check">3</span>
+                            <input type="radio" id="radio1_3" name="1" value="3"/>
+                            <img src={e3} alt="e3"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio4" name="1" value="4"/>
-                            <span class="check">4</span>
+                            <input type="radio" id="radio1_4" name="1" value="4"/>
+                            <img src={e4} alt="e4"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio5" name="1" value="5"/>
-                            <span class="check">5</span>
+                            <input type="radio" id="radio1_5" name="1" value="5"/>
+                            <img src={e5} alt="e5"></img>
                         </label>
                     </form>
                 </div>
@@ -118,24 +124,24 @@ const Page1 = () => {
                     <span>การเล่นผ่านด่านไปเรื่อยๆ</span>
                     <form>
                         <label>
-                            <input type="radio" id="radio1" name="1" value="1" />
-                            <span class="check">1</span>
+                            <input type="radio" id="radio1_1" name="1" value="1"/>
+                            <img src={e1} alt="e1"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio2" name="1" value="2"/>
-                            <span class="check">2</span>
+                            <input type="radio" id="radio1_2" name="1" value="2"/>
+                            <img src={e2} alt="e2"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio3" name="1" value="3"/>
-                            <span class="check">3</span>
+                            <input type="radio" id="radio1_3" name="1" value="3"/>
+                            <img src={e3} alt="e3"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio4" name="1" value="4"/>
-                            <span class="check">4</span>
+                            <input type="radio" id="radio1_4" name="1" value="4"/>
+                            <img src={e4} alt="e4"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio5" name="1" value="5"/>
-                            <span class="check">5</span>
+                            <input type="radio" id="radio1_5" name="1" value="5"/>
+                            <img src={e5} alt="e5"></img>
                         </label>
                     </form>
                 </div>
@@ -144,24 +150,24 @@ const Page1 = () => {
                     <span>การใช้อาวุธต่างๆ ในการต่อสู้</span>
                     <form>
                         <label>
-                            <input type="radio" id="radio1" name="1" value="1" />
-                            <span class="check">1</span>
+                            <input type="radio" id="radio1_1" name="1" value="1"/>
+                            <img src={e1} alt="e1"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio2" name="1" value="2"/>
-                            <span class="check">2</span>
+                            <input type="radio" id="radio1_2" name="1" value="2"/>
+                            <img src={e2} alt="e2"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio3" name="1" value="3"/>
-                            <span class="check">3</span>
+                            <input type="radio" id="radio1_3" name="1" value="3"/>
+                            <img src={e3} alt="e3"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio4" name="1" value="4"/>
-                            <span class="check">4</span>
+                            <input type="radio" id="radio1_4" name="1" value="4"/>
+                            <img src={e4} alt="e4"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio5" name="1" value="5"/>
-                            <span class="check">5</span>
+                            <input type="radio" id="radio1_5" name="1" value="5"/>
+                            <img src={e5} alt="e5"></img>
                         </label>
                     </form>
                 </div>
@@ -170,24 +176,24 @@ const Page1 = () => {
                     <span>การทำมิชชั่นหรือเก็บเควสต่างๆ</span>
                     <form>
                         <label>
-                            <input type="radio" id="radio1" name="1" value="1" />
-                            <span class="check">1</span>
+                            <input type="radio" id="radio1_1" name="1" value="1"/>
+                            <img src={e1} alt="e1"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio2" name="1" value="2"/>
-                            <span class="check">2</span>
+                            <input type="radio" id="radio1_2" name="1" value="2"/>
+                            <img src={e2} alt="e2"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio3" name="1" value="3"/>
-                            <span class="check">3</span>
+                            <input type="radio" id="radio1_3" name="1" value="3"/>
+                            <img src={e3} alt="e3"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio4" name="1" value="4"/>
-                            <span class="check">4</span>
+                            <input type="radio" id="radio1_4" name="1" value="4"/>
+                            <img src={e4} alt="e4"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio5" name="1" value="5"/>
-                            <span class="check">5</span>
+                            <input type="radio" id="radio1_5" name="1" value="5"/>
+                            <img src={e5} alt="e5"></img>
                         </label>
                     </form>
                 </div>
@@ -196,30 +202,31 @@ const Page1 = () => {
                     <span>การเก็บเลเวลและประสบการณ์</span>
                     <form>
                         <label>
-                            <input type="radio" id="radio1" name="1" value="1" />
-                            <span class="check">1</span>
+                            <input type="radio" id="radio1_1" name="1" value="1"/>
+                            <img src={e1} alt="e1"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio2" name="1" value="2"/>
-                            <span class="check">2</span>
+                            <input type="radio" id="radio1_2" name="1" value="2"/>
+                            <img src={e2} alt="e2"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio3" name="1" value="3"/>
-                            <span class="check">3</span>
+                            <input type="radio" id="radio1_3" name="1" value="3"/>
+                            <img src={e3} alt="e3"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio4" name="1" value="4"/>
-                            <span class="check">4</span>
+                            <input type="radio" id="radio1_4" name="1" value="4"/>
+                            <img src={e4} alt="e4"></img>
                         </label>
                         <label>
-                            <input type="radio" id="radio5" name="1" value="5"/>
-                            <span class="check">5</span>
+                            <input type="radio" id="radio1_5" name="1" value="5"/>
+                            <img src={e5} alt="e5"></img>
                         </label>
                     </form>
                 </div>
                 <div><hr/></div>
-                
-                <button onClick={onClick}>Click</button>
+                <div class="card">
+                    <button onClick={onClick} class="btnQ">NEXT</button>
+                </div>
             </div>
     );
 }

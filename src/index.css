@@ -22,26 +22,49 @@ code {
   min-width: 70px;
   margin: auto;
   height: fit-content;
-  /* border: white;
-  border-style: solid; */
   color: white;
 }
+
 
 .card {
   text-align: center;
   margin: 40px;
   font-size: 20px;
-  /* border: white;
-  border-style: solid; */
 }
 
 /*Question Page*/
 
 input[type=radio]{
   position: absolute;
-  visibility: hidden; 
+  /* visibility: hidden;  */
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
+/*Emoji*/
+
+input[type=radio] + img{
+  background-color:rgb(202, 202, 202);
+  border-style: solid;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+[type=radio]:checked + img {
+  background-color:#fbba08;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+label img{
+  width: 30px;
+  height: 30px;
+}
+label img:hover{
+  transform: scale(1.5)
+}
 form {
   display: flex;  
   flex-wrap: nowrap;
@@ -52,53 +75,98 @@ form {
 
 label {
   display: flex;
-  cursor: pointer;
   padding-right: auto;
   margin-left: 30px;
-}
-
-label:hover input ~ .check{
-  background-color: darkgrey;
-}
-
-label input:checked ~ .check{
-  background-color:cyan;
-}
-.check {
-  position:static;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
 }
 
 .span {
   padding-left: 25px;
 }
 
+/*Button Next*/
+.btnQ{
+  border: 3px solid rgb(247, 247, 184);
+  text-decoration: none; 
+  background: rgba(37, 37, 37, 1); 
+  color: rgb(247, 247, 184);   
+  padding: 12px 25px 12px 25px; 
+  cursor: pointer;
+  transition: 0.5s ease ; 
+  font-size: 25px;
+  margin-top: 15px;
+  border-radius: 5%;
+  font-weight: bold;
+}
+ .btnQ:hover{
+  color: black;
+  font-weight: bold;
+  border: 3px solid rgb(247, 247, 184);
+  background-color: rgb(247, 247, 184);
+}
+
 /*Main Page*/
+.contentmain {
+  margin-top: 180px !important;
+  display: block;
+  width: 800px;
+  min-width: 70px;
+  margin: auto;
+  height: fit-content;
+  color: white;
+}
+
+.contentmain .card{
+  text-align: center;
+  margin: 75px;
+  font-size: 20px;
+}
 .card p {
   font-size: 40px;
-  /* padding-top: 60px; */
 }
 
-.card a{
-  text-decoration: none;
-  background: rgba(201, 45, 45, 1);
-  color: white;
-  /* margin: 15px; */
-  padding: 15px 25px 15px 25px;
+.btn{
+  border: 5px solid rgb(247, 247, 184);
+  text-decoration: none; 
+  background: rgba(37, 37, 37, 1); 
+  color: rgb(247, 247, 184);   
+  padding: 20px 40px 20px 40px; 
+  cursor: pointer;
+  transition: 0.5s ease ; 
+  font-size: 25px;
+  margin-top: 15px;
+  border-radius: 5%;
+  font-weight: bold;
 }
+ .btn:hover{
+  color: black;
+  font-weight: bold;
+  border: 5px solid rgb(247, 247, 184);
+  background-color: rgb(247, 247, 184);
+} 
 
-.frame1{
+ 
+.ad{
+  margin-top: 100px !important;
+  margin: auto;
+  background-image: url("./pic/test1.gif");
+  width: 1140px;
   height: 200px;
-  color:#eee;
-  font-size: 50px;
-  background-image: url("./pic/frame1pic.jpeg");
-  text-align: center;
-  margin-top: 100px;
+}
+
+.ad1{
+  margin-top: 50px !important;
+  margin: auto;
+  background-image: url("./pic/test2.gif");
+  width: 1140px;
+  height: 200px;
+}
+
+.ad2{
+  margin-top: 50px !important;
+  margin: auto;
+  background-image: url("./pic/test3.gif");
+  width: 1140px;
+  height: 200px;
 }
 
 input[type=text]{
@@ -106,6 +174,7 @@ input[type=text]{
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 /*Contact Page*/
 
 .contact{
@@ -165,7 +234,7 @@ input[type=text]{
   width: 10px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
