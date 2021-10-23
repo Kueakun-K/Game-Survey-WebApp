@@ -145,7 +145,7 @@ label {
 } 
 
  
-.ad{
+/* .ad{
   margin-top: 100px !important;
   margin: auto;
   background-image: url("./pic/test1.gif");
@@ -167,7 +167,7 @@ label {
   background-image: url("./pic/test3.gif");
   width: 1140px;
   height: 200px;
-}
+} */
 
 input[type=text]{
   padding: 12px 20px;
@@ -222,6 +222,7 @@ input[type=text]{
   text-align: center;
 }
 
+/*Scroll Smooth*/
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -229,23 +230,24 @@ input[type=text]{
 }
 
 /*Scroll bar*/
-
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888; 
   border-radius: 6px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+/*Placeholder*/
+::placeholder{
+  text-align: center;
 }

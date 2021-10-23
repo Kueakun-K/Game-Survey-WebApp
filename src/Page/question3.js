@@ -50,8 +50,9 @@ const Page3 = (data) => {
         }
         for(var y = 0;y < 6;y++){
             if (data2[y+12] === ""){
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = (y*85);
+                document.documentElement.scrollTop = (y*85);
+                break
             }
             else{
                 check[y] = true

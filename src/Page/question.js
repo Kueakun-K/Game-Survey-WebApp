@@ -10,12 +10,16 @@ import e5 from "../pic/e5n.png"
 const Page1 = () => {
     const history = useHistory()
     
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     
     function onClick(){
         var data = []
         var check = []
         for(var x = 0; x < 6; x++) {
-            data.push("");
+            for (var z = 0; z < 3 ;z++){
+                data.push("");
+            }
             check.push(false);
         }
 
@@ -49,8 +53,9 @@ const Page1 = () => {
 
         for(var y = 0;y < 6;y++){
             if (data[y] === ""){
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = (y*85);
+                document.documentElement.scrollTop = (y*85);
+                break
             }
             else{
                 check[y] = true

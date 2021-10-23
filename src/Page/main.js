@@ -1,6 +1,5 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
-// import { Link } from "react-router-dom";
 
 const Main = () => {
     const history = useHistory()
@@ -17,7 +16,7 @@ const Main = () => {
             </div>
             <div class="card">
                 <form>
-                    <input type="text" id="name" placeholder="Your name.."></input>
+                    <input type="text" id="name" placeholder="YOUR NAME"></input>
                 </form>
             </div>
             <div class="card">
@@ -27,11 +26,11 @@ const Main = () => {
             <div class="card">
                 <button onClick={click} class="btn">LET'S GO !</button>
             </div>
-            <div class="card">
+            {/* <div class="card">
                 <div class="ad"></div>
                 <div class="ad1"></div>
                 <div class="ad2"></div>
-            </div>
+            </div> */}
         </div>
     );
     

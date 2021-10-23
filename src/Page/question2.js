@@ -16,9 +16,9 @@ const Page2 = (data) => {
     
     function onClick(){
 
-        var check = []
+        var check2 = []
         for(var x = 0; x < 6; x++) {
-            check.push(false);
+            check2.push(false);
         }
 
         var q1 = document.forms[0];
@@ -50,17 +50,20 @@ const Page2 = (data) => {
         }
         for(var y = 0;y < 6;y++){
             if (data2[y+6] === ""){
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = (y*85);
+                document.documentElement.scrollTop = (y*85);
+                break
             }
             else{
-                check[y] = true
+                check2[y] = true
             }
         }
 
-        if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
+        console.log(data2)
+        console.log(check2)
+        if ((check2[0] === true ) && (check2[1] === true ) && (check2[2] === true ) && (check2[3] === true ) && (check2[4] === true ) && (check2[5] === true )){
             console.log(data2)
-            console.log(check)
+            console.log(check2)
             history.push({
                 pathname: "/page3",
                 state: data2
