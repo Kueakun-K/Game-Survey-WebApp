@@ -1,4 +1,5 @@
 import React from "react";
+
 import kit from '../pic/kit.jpg'
 import non from '../pic/non.jpg'
 import aom from '../pic/aom.jpg'
@@ -7,12 +8,9 @@ import ig from '../pic/instagram.png'
 import facebook from '../pic/facebook.png'
 import email from '../pic/gmail.png'
 
-
 const Contact = () =>{
 
 return(
-    
-    
     <div>
     <div class="contact">
         <div class="imagesCT">
@@ -31,8 +29,7 @@ return(
 
                 <a href="https://web.facebook.com/ksnppjr" target="blank" >
                      <img src={facebook} alt="facebook"/>
-                </a>
-                          
+                </a>       
         </div>
     </div>
     <div class="contact">
@@ -95,10 +92,7 @@ return(
                 </a>
         </div>
     </div>
-
     </div>
-   
-    
 );
 }
 

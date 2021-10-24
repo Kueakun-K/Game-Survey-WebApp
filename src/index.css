@@ -25,7 +25,6 @@ code {
   color: white;
 }
 
-
 .card {
   text-align: center;
   margin: 40px;
@@ -36,7 +35,6 @@ code {
 
 input[type=radio]{
   position: absolute;
-  /* visibility: hidden;  */
   opacity: 0;
   width: 0;
   height: 0;
@@ -144,31 +142,6 @@ label {
   background-color: rgb(247, 247, 184);
 } 
 
- 
-/* .ad{
-  margin-top: 100px !important;
-  margin: auto;
-  background-image: url("./pic/test1.gif");
-  width: 1140px;
-  height: 200px;
-}
-
-.ad1{
-  margin-top: 50px !important;
-  margin: auto;
-  background-image: url("./pic/test2.gif");
-  width: 1140px;
-  height: 200px;
-}
-
-.ad2{
-  margin-top: 50px !important;
-  margin: auto;
-  background-image: url("./pic/test3.gif");
-  width: 1140px;
-  height: 200px;
-} */
-
 input[type=text]{
   padding: 12px 20px;
   border: 1px solid #ccc;
@@ -214,7 +187,6 @@ input[type=text]{
 }
 /*NAME IN contact*/
 .fontNameCT{
-
   margin-bottom: auto;
   margin-top: 40px;
   font-size: 25px;
@@ -251,3 +223,30 @@ input[type=text]{
 ::placeholder{
   text-align: center;
 }
+
+.result{
+  width: 100%;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+}
+
+.result img{
+
+  width: 60%;
+  height:60%;
+}
+
+.typeofgame{
+  width: 100%;
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.typeofgame img{
+  width: 60%;
+  height:60%;
+}
+

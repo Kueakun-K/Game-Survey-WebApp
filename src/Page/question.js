@@ -7,19 +7,17 @@ import e3 from "../pic/e3n.png"
 import e4 from "../pic/e4n.png"
 import e5 from "../pic/e5n.png"
 
-const Page1 = () => {
+const Page1 = (data) => {
     const history = useHistory()
+    var data1 = data.location.state
     
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     
     function onClick(){
-        var data = []
+        // var data = []
         var check = []
         for(var x = 0; x < 6; x++) {
-            for (var z = 0; z < 3 ;z++){
-                data.push("");
-            }
             check.push(false);
         }
 
@@ -32,27 +30,27 @@ const Page1 = () => {
 
         for (var i = 0; i < q1.length; i++) {
             if (q1[i].checked) {
-                data[0] = q1[i].value;
+                data1[0] = q1[i].value;
             }
             if (q2[i].checked) {
-                data[1] = q2[i].value;
+                data1[1] = q2[i].value;
             }
             if (q3[i].checked) {
-                data[2] = q3[i].value;
+                data1[2] = q3[i].value;
             }
             if (q4[i].checked) {
-                data[3] = q4[i].value;
+                data1[3] = q4[i].value;
             }
             if (q5[i].checked) {
-                data[4] = q5[i].value;
+                data1[4] = q5[i].value;
             }
             if (q6[i].checked) {
-                data[5] = q6[i].value;
+                data1[5] = q6[i].value;
             }
         }
 
         for(var y = 0;y < 6;y++){
-            if (data[y] === ""){
+            if (data1[y] === ""){
                 document.body.scrollTop = (y*85);
                 document.documentElement.scrollTop = (y*85);
                 break
@@ -61,13 +59,12 @@ const Page1 = () => {
                 check[y] = true
             }
         }
+        console.log(data1)
 
         if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
-            console.log(data)
-            console.log(check)
             history.push({
                 pathname: "/page2",
-                state: data
+                state: data1
             })
         }
     }   

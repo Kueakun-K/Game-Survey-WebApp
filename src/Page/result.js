@@ -1,9 +1,21 @@
 import React from "react";
-// import {useHistory} from "react-router-dom"
+
+import AdventureIMG from "../pic/adventure.jpg"
+import FightingIMG from "../pic/fighting.jpg"
+import MOBAIMG from "../pic/moba.jpg"
+import PuzzleIMG from "../pic/puzzle.jpg"
+import RPGIMG from "../pic/RPG.jpg"
+import ShootingIMG from "../pic/shooting.jpg"
+import SportIMG from "../pic/sport.jpg"
+import SimulationIMG from "../pic/simulation.jpg"
+import StrategyIMG from "../pic/stategy.jpg"
+import SurvivalHorrorIMG from "../pic/horror.jpg"
+
 
 const Result = (data) =>{
-    // const history = useHistory()
     var result = data.location.state
+    
+    var name = result.pop()
     result = result.map(Number)
 
     const NameTypeGame =["Adventure","Fighting","Moba","Puzzle","RPG","Shooting","Sport","Simulation","Strategy","SurvivalHorror"]
@@ -78,13 +90,65 @@ const Result = (data) =>{
     }
 
     const game = NameTypeGame[count]
-    console.log(EuclidianValue)
-    console.log(temp)
-    console.log(NameTypeGame[count])
+    console.log(result)
+    console.log(game)
+    console.log(name)
+    function show(){
+        if (game === "Adventure")
+            document.getElementById("Adventure").style.display = "flex";
+        else if (game === "Fighting")
+            document.getElementById("Fighting").style.display = "flex";
+        else if (game === "MOBA")
+            document.getElementById("MOBA").style.display = "flex";
+        else if (game === "Puzzle")
+            document.getElementById("Puzzle").style.display = "flex";
+        else if (game === "RPG")
+            document.getElementById("RPG").style.display = "flex";
+        else if (game === "Shooting")
+            document.getElementById("Shooting").style.display = "flex";
+        else if (game === "Sport")
+            document.getElementById("Sport").style.display = "flex";
+        else if (game === "Simulation")
+            document.getElementById("Simulation").style.display = "flex";
+        else if (game === "Strategy")
+            document.getElementById("Strategy").style.display = "flex";
+        else if (game === "SurvivalHorror")
+            document.getElementById("Horror").style.display = "flex";
+    }  
     
 return(
-    <div>
-        <span style={{color: "white"}}>{game}</span>
+    <div >   
+        <div class="result" id="Adventure">
+            <img src={AdventureIMG} alt="Adventure"></img>
+        </div>
+        <div class="result" id="Fighting">
+            <img src={FightingIMG} alt="Fighting"></img>
+        </div>
+        <div class="result" id="MOBA">
+            <img src={MOBAIMG} alt="MOBA"></img>
+        </div>
+        <div class="result" id="Puzzle">
+            <img src={PuzzleIMG} alt="Puzzle"></img>
+        </div>
+        <div class="result" id="RPG">
+            <img src={RPGIMG} alt="RPG"></img>
+        </div>
+        <div class="result" id="Shooting">
+            <img src={ShootingIMG} alt="Shooting"></img>
+        </div>
+        <div class="result" id="Sport">
+            <img src={SportIMG} alt="Sport"></img>
+        </div>
+        <div class="result" id="Simulation">
+            <img src={SimulationIMG} alt="Simulation"></img>
+        </div>
+        <div class="result" id="Strategy">
+            <img src={StrategyIMG} alt="Strategy"></img>
+        </div>
+        <div class="result" id="Horror">
+            <img src={SurvivalHorrorIMG} alt="Horror"></img>
+        </div>
+        <div style={{display: "none"}}>{setTimeout(show,10)}</div>
     </div>
 );
 }

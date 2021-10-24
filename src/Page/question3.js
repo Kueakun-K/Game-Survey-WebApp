@@ -9,7 +9,7 @@ import e5 from "../pic/e5n.png"
 
 const Page3 = (data) => {
     const history = useHistory()
-    var data2 = data.location.state
+    var data3 = data.location.state
 
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -30,26 +30,26 @@ const Page3 = (data) => {
 
         for (var i = 0; i < q1.length; i++) {
             if (q1[i].checked) {
-                data2[12] = q1[i].value;
+                data3[12] = q1[i].value;
             }
             if (q2[i].checked) {
-                data2[13] = q2[i].value;
+                data3[13] = q2[i].value;
             }
             if (q3[i].checked) {
-                data2[14] = q3[i].value;
+                data3[14] = q3[i].value;
             }
             if (q4[i].checked) {
-                data2[15] = q4[i].value;
+                data3[15] = q4[i].value;
             }
             if (q5[i].checked) {
-                data2[16] = q5[i].value;
+                data3[16] = q5[i].value;
             }
             if (q6[i].checked) {
-                data2[17] = q6[i].value;
+                data3[17] = q6[i].value;
             }
         }
         for(var y = 0;y < 6;y++){
-            if (data2[y+12] === ""){
+            if (data3[y+12] === ""){
                 document.body.scrollTop = (y*85);
                 document.documentElement.scrollTop = (y*85);
                 break
@@ -58,13 +58,12 @@ const Page3 = (data) => {
                 check[y] = true
             }
         }
+        console.log(data3)
 
         if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
-            console.log(data2)
-            console.log(check)
             history.push({
                 pathname: "/result",
-                state: data2
+                state: data3
             })
         }
     }   
