@@ -24,11 +24,8 @@
     display: flex;
     background: rgba(239, 239, 239, 1);
     width: auto;
-    /* margin: 10px; */
-    margin: 0.8%;
-    /* padding: 2%; */
-    /* margin-left: 15px;  */
-    /* margin-left: 1%;  */
+    margin: 10px;
+    margin-left: 15px; 
     -webkit-box-shadow: 0px 0px 5px 5px rgba(200, 197, 200, 1);
     box-shadow: 0px 0px 5px 5px rgba(200, 197, 200, 1);
     border-radius: 7px;
@@ -37,10 +34,8 @@
 .link-page a{
     text-decoration: none;
     margin: auto;
-    /* font-size: 13px; */
-    font-size: 0.8vw;
-    /* padding: 13px; */
-    padding: 0.8vw;
+    font-size: 13px;
+    padding: 13px;
     font-weight: bold;
     color: black;
 }

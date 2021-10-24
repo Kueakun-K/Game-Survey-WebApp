@@ -18,9 +18,8 @@ code {
 
 .content {
   display: block;
-  /* width: 800px; */
-  width: 55%;
-  /* min-width: 70px; */
+  width: 800px;
+  min-width: 70px;
   margin: auto;
   height: fit-content;
   color: white;
