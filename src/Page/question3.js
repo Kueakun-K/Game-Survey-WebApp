@@ -1,5 +1,6 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
+import axios from "axios"
 
 import e1 from "../pic/e1n.png"
 import e2 from "../pic/e2n.png"
@@ -61,9 +62,93 @@ const Page3 = (data) => {
         console.log(data3)
 
         if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
-            history.push({
-                pathname: "/result",
-                state: data3
+
+            const name = data3[18]
+            data3 = data3.map(Number)
+            const NameTypeGame =["Adventure","Fighting","Moba","Puzzle","RPG","Shooting","Sport","Simulation","Strategy","SurvivalHorror"]
+
+            const Adventure = [4.3571,4.4286,	4.4286,	4.2143,	4.8571,	4.7857,	3.9286,	3.5714,4.3571,
+                4.5714,	4.6429,	3.0000,	3.5000,	4.4286,	4.0000,	3.4286,	4.5714,	4.9286]
+                
+            const Fighting = [4.625,4.5,3.5,4.125,2.375,	2.5,4.875,	4.875,2.125,3,
+                1.875,1.875,1.875,2.25,	4.25,2.75,4.5,2]
+
+            const Moba = [3.6923,	3.8462,	2.6923,	3.8462,	3.0769,	4.0769,	4.9231,	4.3846,	4.8462,
+                4.0769,	4.5385,	2.7692,	3.1538	,3.5385,4.6923,	4.9231	,4.4615	,2.7692]
+
+            const Puzzle = [2.0000,	3.4167,	4.7500,	1.9167,	4.3333,	4.7500,	1.4167,	1.5833,	4.7500,
+                4.0833,	4.8333,	1.5000,	1.7500,	1.8333,	2.9167,	1.7500,	3.7500,	2.1667]
+
+            const RPG = [4.6923,	4.3846,	4.0000,	4.8462,	4.5385,	4.8462,	4.7692,	3.4615,	3.7692,	4.3077,
+                3.7692,	1.8462,	2.9231,	3.5385,	4.6923,	3.1538,	4.6154,	4.6923]
+
+            const Shooting = [3.1765,	4.7647,	3.0000,	4.7647,	3.4706,	3.9412,	4.8824,	4.4118,	4.8824,	
+                4.5294,	4.8235,	3.5882,	4.3529,	4.4118,	4.2353,	4.8235,	4.4118,	2.9412]
+
+            const Sport = [3.9286	,4.2667	,2.9286	,1.9333,3.2667,	3.6667,	2.2143,	2.8667,	4.2857,
+                3.5333,	4.2143,	4.5333,	2.8667,	1.6667,	2.5333,	4.3333,	4.5333,	1.7857]
+
+            const Simulation = [4.4667,4.8667,1.5000,2.8000,3.7000,3.2000,2.3000,	1.5000,	1.7333,	
+                4.6000,3.8667,2.5333,2.5000,4.1333,2.6667,2.5333,4.6667,4.5333]
+
+            const Strategy = [3.2941,	4.0588,	3.5882,	3.6471,	3.2941,	3.5294,	3.8824,	2.9412,	4.8235,
+                4.5294,	4.7059,	1.7692,	2.8824,	2.9412,	3.4118,	4.2353,	4.4706,	2.9412]
+
+            const SurvivalHorror = [4.7333,4.7333,3.8000,2.2667,4.6000,3.2000,1.8000,1.3846,3.3846,
+                4.0667,2.9231,1.3333,5.0000,4.5385,2.5333,2.6667,4.8667,4.2308]
+
+            var EuclidianValue = []
+                        
+            function Euclidian(standard,user){
+                let value = 0
+                for (let i = 0 ;i < 18 ;i++){
+                    let tmp = standard[i]-user[i]
+                    tmp = Math.pow(tmp, 2)
+                    value += tmp
+                }
+                return Math.sqrt(value)
+            }
+            
+            EuclidianValue.push(Euclidian(Adventure,data3))
+            EuclidianValue.push(Euclidian(Fighting,data3))
+            EuclidianValue.push(Euclidian(Moba,data3))
+            EuclidianValue.push(Euclidian(Puzzle,data3))
+            EuclidianValue.push(Euclidian(RPG,data3))
+            EuclidianValue.push(Euclidian(Shooting,data3))
+            EuclidianValue.push(Euclidian(Sport,data3))
+            EuclidianValue.push(Euclidian(Simulation,data3))
+            EuclidianValue.push(Euclidian(Strategy,data3))
+            EuclidianValue.push(Euclidian(SurvivalHorror,data3))
+
+            var temp = []
+            for (let j = 0; j<10;j++){
+                temp.push(EuclidianValue[j])
+            }
+            temp.sort()
+
+            var count = 0
+            for (let k = 0; k< 10;k++){
+                if (temp[0] !== EuclidianValue[k]){
+                    count += 1
+                }
+                else{
+                    break
+                }
+            }
+
+            const game = NameTypeGame[count]
+
+            const datacomplete = [game , name]
+            console.log(datacomplete)
+
+            axios.post("https://backend-linear.herokuapp.com/api/data", {
+                dataName: name,
+                dataGame: game,
+            }).then(()=>{
+                history.push({
+                    pathname: "/result",
+                    state: datacomplete
+                })
             })
         }
     }   

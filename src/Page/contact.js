@@ -9,6 +9,8 @@ import facebook from '../pic/facebook.png'
 import email from '../pic/gmail.png'
 
 const Contact = () =>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 
 return(
     <div>

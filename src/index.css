@@ -25,6 +25,15 @@ code {
   color: white;
 }
 
+.contentresult {
+  display: block;
+  width: 80%;
+  min-width: 70px;
+  margin: auto;
+  height: fit-content;
+  color: white;
+}
+
 .card {
   text-align: center;
   margin: 40px;
@@ -226,8 +235,8 @@ input[type=text]{
 
 .result{
   width: 100%;
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   justify-content: center;
 }
 

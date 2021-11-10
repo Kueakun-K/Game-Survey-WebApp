@@ -12,6 +12,9 @@ import StrategyIMG from "../pic/stategy.jpg"
 import SurvivalHorrorIMG from "../pic/horror.jpg"
 
 const Typeofgame = () =>{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    
     return(
         <div >   
         <div class="typeofgame" id="Adventure">
@@ -44,6 +47,7 @@ const Typeofgame = () =>{
         <div class="typeofgame" id="Horror">
             <img src={SurvivalHorrorIMG} alt="Horror"></img>
         </div>
+        <script src = ""></script>
     </div>
     );
 }

@@ -33,7 +33,7 @@ const Main = () => {
             </div>
             <div class="card">
                 <form>
-                    <input type="text" id="name" placeholder="YOUR NAME"></input>
+                    <input type="text" id="Namebox" placeholder="YOUR NAME"></input>
                 </form>
             </div>
             <div class="card">
