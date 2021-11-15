@@ -1,20 +1,18 @@
 
-body {
+ body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: "Kanit";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(37, 37, 37, 1);
+  /* background: rgba(37, 37, 37, 1); */
+  background-image: url(./pic/bg1.jpeg);
   margin-top: 100px;
   overflow-y: scroll;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+}  
+  
 
 .content {
   display: block;
@@ -33,6 +31,8 @@ code {
   height: fit-content;
   color: white;
 }
+
+
 
 .card {
   text-align: center;
@@ -129,6 +129,7 @@ label {
 }
 .card p {
   font-size: 40px;
+  font-weight: bold;
 }
 
 .btn{
@@ -233,23 +234,42 @@ input[type=text]{
   text-align: center;
 }
 
-.result{
-  width: 100%;
+.result2{
+  
+  height:400px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+}
+.row {
   display: flex;
-  /* display: none; */
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.result img{
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
 
-  width: 60%;
-  height:60%;
+.imagesRS img{
+  width: 700px;
+  display: flex;
+  border-radius: 7%;
+  transition: 2s; /*hover*/
+  margin: auto;
+
+}
+.imagesRs img:hover{
+ transform: scale(1.2);
 }
 
 .typeofgame{
   width: 100%;
   display: flex;
-  /* display: none; */
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -259,3 +279,52 @@ input[type=text]{
   height:60%;
 }
 
+.result{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.resultpre{
+  width: 50%;
+  display: none;
+  justify-content: center;
+}
+
+.resultpost{
+  width: 50%;
+  display: none;
+  justify-content: center;
+}
+
+.resultpre img{
+  width: 90%;
+  height:90%;
+  padding: 25px;
+}
+
+.resultpost img{
+  width: 90%;
+  height:90%;
+  padding: 25px;
+}
+.resultMess{
+  width: 100%;
+  display: flex;
+}
+
+.resultMessP{
+  width:50%;
+  justify-content: center;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.resultMessH{
+  width:100%;
+  justify-content: center;
+  text-align: center;
+  color: #f1f1f1;
+  display: none;
+}

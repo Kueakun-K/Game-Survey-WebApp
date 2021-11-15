@@ -1,6 +1,6 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
-import axios from "axios"
+// import axios from "axios"
 
 import e1 from "../pic/e1n.png"
 import e2 from "../pic/e2n.png"
@@ -120,15 +120,15 @@ const Page3 = (data) => {
             EuclidianValue.push(Euclidian(Strategy,data3))
             EuclidianValue.push(Euclidian(SurvivalHorror,data3))
 
-            var temp = []
+            var temp1 = []
             for (let j = 0; j<10;j++){
-                temp.push(EuclidianValue[j])
+                temp1.push(EuclidianValue[j])
             }
-            temp.sort()
+            temp1.sort()
 
             var count = 0
             for (let k = 0; k< 10;k++){
-                if (temp[0] !== EuclidianValue[k]){
+                if (temp1[0] !== EuclidianValue[k]){
                     count += 1
                 }
                 else{
@@ -137,18 +137,101 @@ const Page3 = (data) => {
             }
 
             const game = NameTypeGame[count]
+            
+            var CovarianceValue = []
 
-            const datacomplete = [game , name]
+            function covariance(std1,std2){
+                let xbar = 0
+                let ybar = 0
+                let xmxbar = []
+                let ymybar = []
+                let cov = 0
+                for(let i = 0;i<18;i++){
+                    xbar += std1[i]
+                    ybar += std2[i]
+                }
+                xbar = xbar/18
+                ybar = ybar/18
+                for(let i = 0;i<18;i++){
+                    xmxbar.push(std1[i] - xbar)
+                    ymybar.push(std2[i] - ybar)
+                }
+                for(let i = 0;i<18;i++){
+                    cov += xmxbar[i] * ymybar[i]
+                }
+                return cov
+                
+            }
+            let tmp
+            if (game === "Adventure")
+                tmp = Adventure
+            else if (game === "Fighting")
+                tmp = Fighting
+            else if (game === "Moba")
+                tmp = Moba
+            else if (game === "Puzzle")
+                tmp = Puzzle
+            else if (game === "RPG")
+                tmp = RPG
+            else if (game === "Shooting")
+                tmp = Shooting
+            else if (game === "Sport")
+                tmp = Sport
+            else if (game === "Simulation")
+                tmp = Simulation
+            else if (game === "Strategy")
+                tmp = Strategy
+            else if (game === "SurvivalHorror")
+                tmp = SurvivalHorror
+
+            CovarianceValue.push(covariance(Adventure,tmp))
+            CovarianceValue.push(covariance(Fighting,tmp))
+            CovarianceValue.push(covariance(Moba,tmp))
+            CovarianceValue.push(covariance(Puzzle,tmp))
+            CovarianceValue.push(covariance(RPG,tmp))
+            CovarianceValue.push(covariance(Shooting,tmp))
+            CovarianceValue.push(covariance(Sport,tmp))
+            CovarianceValue.push(covariance(Simulation,tmp))
+            CovarianceValue.push(covariance(Strategy,tmp))
+            CovarianceValue.push(covariance(SurvivalHorror,tmp))
+
+            console.log(EuclidianValue)
+            console.log(CovarianceValue)
+
+            var temp2 = []
+            for (let j = 0; j<10;j++){
+                temp2.push(CovarianceValue[j])
+            }
+            temp2.sort()
+
+            var count2 = 0
+            for (let k = 0; k< 10;k++){
+                if (temp2[9] !== CovarianceValue[k]){
+                    count2 += 1
+                }
+                else{
+                    break
+                }
+            }
+            
+            const gameCOV = NameTypeGame[count2]
+
+            const datacomplete = [game , name, gameCOV]
             console.log(datacomplete)
 
-            axios.post("https://backend-linear.herokuapp.com/api/data", {
-                dataName: name,
-                dataGame: game,
-            }).then(()=>{
-                history.push({
-                    pathname: "/result",
-                    state: datacomplete
-                })
+            // axios.post("https://backend-linear.herokuapp.com/api/data", {
+            //     dataName: name,
+            //     dataGame: game,
+            // }).then(()=>{
+            //     history.push({
+            //         pathname: "/result",
+            //         state: datacomplete
+            //     })
+            // })
+
+            history.push({
+                pathname: "/result",
+                state: datacomplete
             })
         }
     }   
