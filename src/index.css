@@ -16,7 +16,8 @@
 
 .content {
   display: block;
-  width: 800px;
+  /* width: 800px; */
+  width: 80%;
   min-width: 70px;
   margin: auto;
   height: fit-content;
@@ -33,13 +34,16 @@
 }
 
 
-
 .card {
   text-align: center;
   margin: 40px;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
-
+@media screen and (max-width: 800px) {
+  .card {
+    font-size: 3.5vw;
+  }
+}
 /*Question Page*/
 
 input[type=radio]{
@@ -115,7 +119,8 @@ label {
 .contentmain {
   margin-top: 180px !important;
   display: block;
-  width: 800px;
+  /* width: 800px; */
+  width: 80%;
   min-width: 70px;
   margin: auto;
   height: fit-content;
@@ -124,12 +129,17 @@ label {
 
 .contentmain .card{
   text-align: center;
-  margin: 75px;
-  font-size: 20px;
+  margin: 60px;
 }
 .card p {
-  font-size: 40px;
+  font-size: 3vw;
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .card p {
+    font-size: 5vw;
+  }
 }
 
 .btn{
