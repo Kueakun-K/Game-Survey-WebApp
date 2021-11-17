@@ -67,7 +67,18 @@ const Page1 = (data) => {
                 state: data1
             })
         }
-    }   
+    } 
+    
+    function zoomOutMobile() {
+        var viewport = document.querySelector('meta[name="viewport"]');
+      
+        if ( viewport ) {
+          viewport.content = "initial-scale=0.1";
+          viewport.content = "width=1200";
+        }
+      }
+
+    zoomOutMobile();
     return(
             <div class="content">
                 <div class="card">
