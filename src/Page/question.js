@@ -70,11 +70,11 @@ const Page1 = (data) => {
     } 
     
     function zoomOutMobile() {
-        var viewport = document.querySelector('meta[name="viewport"]');
-      
+        const viewport = document.querySelector('meta[name="viewport"]');
+    
         if ( viewport ) {
-          viewport.content = "initial-scale=0.1";
-          viewport.content = "width=1200";
+          viewport.content = 'initial-scale=1';
+          viewport.content = 'width=device-width';
         }
       }
 
