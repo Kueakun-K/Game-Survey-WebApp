@@ -73,8 +73,9 @@ const Page1 = (data) => {
         const viewport = document.querySelector('meta[name="viewport"]');
     
         if ( viewport ) {
-          viewport.content = 'initial-scale=1';
+          viewport.content = 'initial-scale=1.0';
           viewport.content = 'width=device-width';
+          viewport.content = 'maximum-scale=1.0';
         }
       }
 

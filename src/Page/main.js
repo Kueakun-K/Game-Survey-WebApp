@@ -25,6 +25,9 @@ const Main = () => {
             })
         }
     }
+
+    const viewport = document.querySelector('meta[name="viewport"]');
+    console.log(viewport)
     return(
         <div>
         {/* <div class="contentmain"> */}
