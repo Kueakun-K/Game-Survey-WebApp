@@ -27,22 +27,22 @@ const Main = () => {
     }
     return(
         <div>
-        <div class="contentmain">
-            <div class="card">
+        {/* <div class="contentmain"> */}
+            <div class="cardmain">
                 <p>WHAT'S YOUR NAME ?</p>
             </div>
-            <div class="card">
+            <div class="cardmain">
                 <form>
                     <input type="text" id="Namebox" placeholder="YOUR NAME"></input>
                 </form>
             </div>
-            <div class="card">
+            <div class="cardmain">
                 <p>READY FOR TESTING ?</p>                  
             </div>
-            </div>
-            <div class="card">
-                <button onClick={click} class="btn">LET'S GO !</button>
-            </div>
+        {/* </div> */}
+        <div class="cardmain">
+            <button onClick={click} class="btn">LET'S GO !</button>
+        </div>
         </div>
     );
 }
