@@ -222,7 +222,8 @@ const Page3 = (data) => {
 
             axios.post("https://backend-linear.herokuapp.com/api/data", {
                 dataName: name,
-                dataGame: game,
+                dataGameEUC: game,
+                dataGameCOV: gameCOV,
             }).then(()=>{
                 history.push({
                     pathname: "/result",
