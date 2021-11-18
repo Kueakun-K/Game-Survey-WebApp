@@ -58,7 +58,6 @@ const Page1 = (data) => {
                 check[y] = true
             }
         }
-        // console.log(data1)
 
         if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
             history.push({

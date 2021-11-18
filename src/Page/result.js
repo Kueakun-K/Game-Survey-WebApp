@@ -1,4 +1,5 @@
 import React from "react"
+import {useHistory} from "react-router-dom"
 
 import AdventureIMG from "../pic/adventure.jpg"
 import FightingIMG from "../pic/fighting.jpg"
@@ -11,6 +12,7 @@ import SimulationIMG from "../pic/simulation.jpg"
 import StrategyIMG from "../pic/stategy.jpg"
 import SurvivalHorrorIMG from "../pic/horror.jpg"
 const Result = (data) =>{
+    const history = useHistory()
     var result = data.location.state
 
     const game = result[0]
@@ -62,6 +64,14 @@ const Result = (data) =>{
         else if (gameCOV === "SurvivalHorror")
             document.getElementById("HorrorCOV").style.display = "flex";
     } 
+
+    function stat(){
+        history.push({
+            pathname: "/stat"
+        })
+    }
+
+
 return( 
     <div >
         <div class="result">   
@@ -146,6 +156,9 @@ return(
                 <img src={SurvivalHorrorIMG} alt="Horror"></img>
                 <h1>Covariance</h1>
             </div>
+        </div>
+        <div class="card">
+                    <button onClick={stat} class="btnQ">STAT</button>
         </div>
         <div style={{display: "none"}}>{setTimeout(show,10)}</div>
     </div>

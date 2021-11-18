@@ -382,10 +382,17 @@ input[type=text]{
   justify-content: center;
 }
 
-
 .modal img{
-  
   position: absolute;
   margin-top: 200px;
-  
+}
+
+.table{
+  width:50%;
+  /* border: 3px; */
+  color: white;
+}
+
+table{
+  width: 30%;
 }

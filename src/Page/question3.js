@@ -196,9 +196,6 @@ const Page3 = (data) => {
             CovarianceValue.push(covariance(Strategy,tmp))
             CovarianceValue.push(covariance(SurvivalHorror,tmp))
 
-            // console.log(EuclidianValue)
-            // console.log(CovarianceValue)
-
             var temp2 = []
             for (let j = 0; j<10;j++){
                 temp2.push(CovarianceValue[j])
@@ -218,7 +215,6 @@ const Page3 = (data) => {
             const gameCOV = NameTypeGame[count2]
 
             const datacomplete = [game , name, gameCOV]
-            // console.log(datacomplete)
 
             axios.post("https://backend-linear.herokuapp.com/api/data", {
                 dataName: name,
@@ -230,11 +226,6 @@ const Page3 = (data) => {
                     state: datacomplete
                 })
             })
-
-            // history.push({
-            //     pathname: "/result",
-            //     state: datacomplete
-            // })
         }
     }   
     return(

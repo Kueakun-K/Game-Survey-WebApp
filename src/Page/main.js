@@ -1,6 +1,5 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
-// import Loading from "../pic/Loading.gif"
 
 const Main = () => {
     const history = useHistory()
@@ -18,7 +17,6 @@ const Main = () => {
         
         data[18] = name
         
-        // console.log(data)
         if (data[18] !== ""){
             history.push({
                 pathname: "/page1",
@@ -26,10 +24,7 @@ const Main = () => {
             })
         }
     }
-    // function test(){
-    //     document.getElementById("myModal").style.display = "flex";
-    // }
-
+    
     return(
         <div> 
             <div class="cardmain">
@@ -46,10 +41,6 @@ const Main = () => {
             <div class="cardmain">
                 <button onClick={click} class="btn">LET'S GO !</button>
             </div>     
-            {/* <button onClick={test}>Test</button>   
-            <div id="myModal" class="modal">
-                    <img src={Loading} alt="Load"></img>
-            </div> */}
         </div>
     );
 }
