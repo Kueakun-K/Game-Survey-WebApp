@@ -1,6 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
-// import axios from "axios"
+import axios from "axios"
+import Loading from "../pic/Loading.gif"
 
 import e1 from "../pic/e1n.png"
 import e2 from "../pic/e2n.png"
@@ -16,7 +17,7 @@ const Page3 = (data) => {
     document.documentElement.scrollTop = 0;
     
     function onClick(){
-
+        document.getElementById("myModal").style.display = "flex";
         var check = []
         for(var x = 0; x < 6; x++) {
             check.push(false);
@@ -219,20 +220,20 @@ const Page3 = (data) => {
             const datacomplete = [game , name, gameCOV]
             // console.log(datacomplete)
 
-            // axios.post("https://backend-linear.herokuapp.com/api/data", {
-            //     dataName: name,
-            //     dataGame: game,
-            // }).then(()=>{
-            //     history.push({
-            //         pathname: "/result",
-            //         state: datacomplete
-            //     })
-            // })
-
-            history.push({
-                pathname: "/result",
-                state: datacomplete
+            axios.post("https://backend-linear.herokuapp.com/api/data", {
+                dataName: name,
+                dataGame: game,
+            }).then(()=>{
+                history.push({
+                    pathname: "/result",
+                    state: datacomplete
+                })
             })
+
+            // history.push({
+            //     pathname: "/result",
+            //     state: datacomplete
+            // })
         }
     }   
     return(
@@ -395,6 +396,9 @@ const Page3 = (data) => {
                 <div><hr/></div>
                 <div class="card">
                     <button onClick={onClick} class="btnQ">SUBMIT</button>
+                </div>
+                <div id="myModal" class="modal">
+                    <img src={Loading} alt="Load"></img>
                 </div>
             </div>
     );

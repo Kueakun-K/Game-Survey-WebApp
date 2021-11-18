@@ -13,16 +13,17 @@ import Page3 from './Page/question3';
 import Result from './Page/result';
 import Stat from './Page/stat';
 
-import Adventure from './result/Adventure';
-import Fighting from './result/Fighting';
-import Horror from './result/Horror';
-import Moba from './result/Moba';
-import Puzzle from './result/Puzzle';
-import RPG from './result/RPG';
-import Shooting from './result/Shooting';
-import Simulation from './result/Simulation';
-import Sport from './result/Sport';
-import Strategy from './result/Strategy';
+import Example from './Page/test';
+// import Adventure from './result/Adventure';
+// import Fighting from './result/Fighting';
+// import Horror from './result/Horror';
+// import Moba from './result/Moba';
+// import Puzzle from './result/Puzzle';
+// import RPG from './result/RPG';
+// import Shooting from './result/Shooting';
+// import Simulation from './result/Simulation';
+// import Sport from './result/Sport';
+// import Strategy from './result/Strategy';
 
 export default function App()  {
   return (
@@ -46,7 +47,8 @@ export default function App()  {
 
           <Route exact path="/stat" component={Stat} />
 
-          <Route exact path="/result/adventure" component={Adventure} />
+          <Route exact path="/test" component={Example} />
+          {/* <Route exact path="/result/adventure" component={Adventure} />
           <Route exact path="/result/Fighting" component={Fighting} />
           <Route exact path="/result/Horror" component={Horror} />
           <Route exact path="/result/Moba" component={Moba} />
@@ -55,7 +57,7 @@ export default function App()  {
           <Route exact path="/result/Shooting" component={Shooting} />
           <Route exact path="/result/Simulation" component={Simulation} />
           <Route exact path="/result/Sport" component={Sport} />
-          <Route exact path="/result/Strategy" component={Strategy} />
+          <Route exact path="/result/Strategy" component={Strategy} /> */}
         </Switch>
         </Router>
     </div>

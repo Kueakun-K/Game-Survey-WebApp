@@ -15,7 +15,6 @@ const Page1 = (data) => {
     document.documentElement.scrollTop = 0;
     
     function onClick(){
-        // var data = []
         var check = []
         for(var x = 0; x < 6; x++) {
             check.push(false);
@@ -69,17 +68,6 @@ const Page1 = (data) => {
         }
     } 
     
-    // function zoomOutMobile() {
-    //     const viewport = document.querySelector('meta[name="viewport"]');
-    
-    //     if ( viewport ) {
-    //       viewport.content = 'initial-scale=1.0';
-    //       viewport.content = 'width=device-width';
-    //     //   viewport.content = 'maximum-scale=1.0';
-    //     }
-    //   }
-
-    // zoomOutMobile();
     return(
             <div class="content">
                 <div class="card">

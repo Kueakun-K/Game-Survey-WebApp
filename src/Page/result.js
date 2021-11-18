@@ -17,7 +17,7 @@ const Result = (data) =>{
     // const name = result[1]
     const gameCOV = result[2]
 
-    console.log(result)
+    // console.log(result)
     
     function show(){
         if (game === "Adventure")
@@ -64,12 +64,6 @@ const Result = (data) =>{
     } 
 return( 
     <div >
-        {/* <div class="resultMess">
-            <div class="resultMessH">
-                <h1>{name}</h1>
-            </div>
-        </div> */}
-
         <div class="result">   
             <div class="resultpre" id="Adventure">
                 <img src={AdventureIMG} alt="Adventure"></img>
@@ -153,14 +147,6 @@ return(
                 <h1>Covariance</h1>
             </div>
         </div>
-        {/* <div class="resultMess">
-            <div class="resultMessP">
-                <h1>Euclidian</h1>
-            </div>
-            <div class="resultMessP">
-                <h1>Covariance</h1>
-            </div>
-        </div> */}
         <div style={{display: "none"}}>{setTimeout(show,10)}</div>
     </div>
 );
