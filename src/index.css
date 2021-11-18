@@ -145,14 +145,7 @@ label {
   font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
-  .cardmain p{
-    font-size: 5vw;
-  }
-  input[type=text]{
-    width: 75%;
-  }
-}
+
 
 
 .btn{
@@ -308,18 +301,21 @@ input[type=text]{
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  /* flex-direction: column; */
 }
 
 .resultpre{
   width: 50%;
   display: none;
   justify-content: center;
+  flex-direction: column;
 }
 
 .resultpost{
   width: 50%;
   display: none;
   justify-content: center;
+  flex-direction: column;
 }
 
 .resultpre img{
@@ -328,12 +324,26 @@ input[type=text]{
   padding: 25px;
 }
 
+.resultpre h1{
+  width:100%;
+  justify-content: center;
+  text-align: center;
+  color: #f1f1f1;
+}
+
 .resultpost img{
   width: 90%;
   height:90%;
   padding: 25px;
 }
-.resultMess{
+
+.resultpost h1{
+  width:100%;
+  justify-content: center;
+  text-align: center;
+  color: #f1f1f1;
+}
+/* .resultMess{
   width: 100%;
   display: flex;
 }
@@ -351,4 +361,27 @@ input[type=text]{
   text-align: center;
   color: #f1f1f1;
   display: none;
+} */
+
+
+@media screen and (max-width: 800px) {
+  .cardmain p{
+    font-size: 5vw;
+  }
+  input[type=text]{
+    width: 75%;
+  }
+  .result{
+    flex-direction: column;
+  }
+  .resultpost{
+    width: 100%;
+  }
+  .resultpre{
+    width: 100%;
+  }
+  .typeofgame img{
+    width: 70%;
+    height:70%;
+  }
 }

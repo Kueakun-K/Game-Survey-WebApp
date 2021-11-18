@@ -59,7 +59,7 @@ const Page1 = (data) => {
                 check[y] = true
             }
         }
-        console.log(data1)
+        // console.log(data1)
 
         if ((check[0] === true ) && (check[1] === true ) && (check[2] === true ) && (check[3] === true ) && (check[4] === true ) && (check[5] === true )){
             history.push({
@@ -69,17 +69,17 @@ const Page1 = (data) => {
         }
     } 
     
-    function zoomOutMobile() {
-        const viewport = document.querySelector('meta[name="viewport"]');
+    // function zoomOutMobile() {
+    //     const viewport = document.querySelector('meta[name="viewport"]');
     
-        if ( viewport ) {
-          viewport.content = 'initial-scale=1.0';
-          viewport.content = 'width=device-width';
-          viewport.content = 'maximum-scale=1.0';
-        }
-      }
+    //     if ( viewport ) {
+    //       viewport.content = 'initial-scale=1.0';
+    //       viewport.content = 'width=device-width';
+    //     //   viewport.content = 'maximum-scale=1.0';
+    //     }
+    //   }
 
-    zoomOutMobile();
+    // zoomOutMobile();
     return(
             <div class="content">
                 <div class="card">

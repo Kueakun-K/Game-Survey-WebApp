@@ -14,7 +14,7 @@ const Result = (data) =>{
     var result = data.location.state
 
     const game = result[0]
-    const name = result[1]
+    // const name = result[1]
     const gameCOV = result[2]
 
     console.log(result)
@@ -64,83 +64,103 @@ const Result = (data) =>{
     } 
 return( 
     <div >
-        <div class="resultMess">
+        {/* <div class="resultMess">
             <div class="resultMessH">
                 <h1>{name}</h1>
             </div>
-        </div>
+        </div> */}
 
         <div class="result">   
             <div class="resultpre" id="Adventure">
                 <img src={AdventureIMG} alt="Adventure"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Fighting">
                 <img src={FightingIMG} alt="Fighting"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="MOBA">
                 <img src={MOBAIMG} alt="MOBA"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Puzzle">
                 <img src={PuzzleIMG} alt="Puzzle"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="RPG">
                 <img src={RPGIMG} alt="RPG"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Shooting">
                 <img src={ShootingIMG} alt="Shooting"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Sport">
                 <img src={SportIMG} alt="Sport"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Simulation">
                 <img src={SimulationIMG} alt="Simulation"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Strategy">
                 <img src={StrategyIMG} alt="Strategy"></img>
+                <h1>Euclidian</h1>
             </div>
             <div class="resultpre" id="Horror">
                 <img src={SurvivalHorrorIMG} alt="Horror"></img>
+                <h1>Euclidian</h1>
             </div>
 
             <div class="resultpost" id="AdventureCOV">
                 <img src={AdventureIMG} alt="Adventure"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="FightingCOV">
                 <img src={FightingIMG} alt="Fighting"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="MOBACOV">
                 <img src={MOBAIMG} alt="MOBA"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="PuzzleCOV">
                 <img src={PuzzleIMG} alt="Puzzle"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="RPGCOV">
                 <img src={RPGIMG} alt="RPG"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="ShootingCOV">
                 <img src={ShootingIMG} alt="Shooting"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="SportCOV">
                 <img src={SportIMG} alt="Sport"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="SimulationCOV">
                 <img src={SimulationIMG} alt="Simulation"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="StrategyCOV">
                 <img src={StrategyIMG} alt="Strategy"></img>
+                <h1>Covariance</h1>
             </div>
             <div class="resultpost" id="HorrorCOV">
                 <img src={SurvivalHorrorIMG} alt="Horror"></img>
+                <h1>Covariance</h1>
             </div>
         </div>
-        <div class="resultMess">
+        {/* <div class="resultMess">
             <div class="resultMessP">
                 <h1>Euclidian</h1>
             </div>
             <div class="resultMessP">
                 <h1>Covariance</h1>
             </div>
-        </div>
+        </div> */}
         <div style={{display: "none"}}>{setTimeout(show,10)}</div>
     </div>
 );

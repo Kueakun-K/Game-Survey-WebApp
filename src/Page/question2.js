@@ -58,7 +58,7 @@ const Page2 = (data) => {
                 check2[y] = true
             }
         }
-        console.log(data2)
+        // console.log(data2)
         if ((check2[0] === true ) && (check2[1] === true ) && (check2[2] === true ) && (check2[3] === true ) && (check2[4] === true ) && (check2[5] === true )){
             history.push({
                 pathname: "/page3",
