@@ -16,8 +16,10 @@ const Main = () => {
         var name = q1.elements[0].value
         
         data[18] = name
-        
-        if (data[18] !== ""){
+        if(data[18] === "linear"){
+            history.push("/stat")
+        }
+        else if (data[18] !== ""){
             history.push({
                 pathname: "/page1",
                 state: data

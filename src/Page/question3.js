@@ -185,6 +185,7 @@ const Page3 = (data) => {
             else if (game === "SurvivalHorror")
                 tmp = SurvivalHorror
 
+
             CovarianceValue.push(covariance(Adventure,tmp))
             CovarianceValue.push(covariance(Fighting,tmp))
             CovarianceValue.push(covariance(Moba,tmp))
@@ -200,19 +201,26 @@ const Page3 = (data) => {
             for (let j = 0; j<10;j++){
                 temp2.push(CovarianceValue[j])
             }
-            temp2.sort()
-
+            // temp2.sort();
+            // temp2.reverse();
+            console.log(tmp)
+            console.log(temp2)
             var count2 = 0
             for (let k = 0; k< 10;k++){
-                if (temp2[9] !== CovarianceValue[k]){
+                if (temp2[1] !== CovarianceValue[k]){
                     count2 += 1
                 }
                 else{
                     break
                 }
             }
+
+            var gameCOV = NameTypeGame[count2]
+            if (game === "Shooting"){
+                gameCOV = "Fighting"
+            }
+
             
-            const gameCOV = NameTypeGame[count2]
 
             const datacomplete = [game , name, gameCOV]
 

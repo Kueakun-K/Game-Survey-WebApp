@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios"
 
+
 const Stat = () => {
     const [datas, setDatas] = React.useState([])
     
@@ -15,6 +16,7 @@ const Stat = () => {
     const NameTypeGame =["Adventure","Fighting","Moba","Puzzle","RPG","Shooting","Sport","Simulation","Strategy","SurvivalHorror"]
     var countCOV = [0,0,0,0,0,0,0,0,0,0]
     var countEUC = [0,0,0,0,0,0,0,0,0,0]
+    
     datas.map((data) =>{
     if(data.dataGameCOV === "Adventure" )
         countCOV[0] += 1
@@ -60,6 +62,9 @@ const Stat = () => {
     return 0
     }
     )
+        
+    
+    
     return(
         <div>
             <div class="table">
