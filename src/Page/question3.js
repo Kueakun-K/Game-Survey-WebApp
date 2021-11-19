@@ -103,9 +103,9 @@ const Page3 = (data) => {
             function Euclidian(standard,user){
                 let value = 0
                 for (let i = 0 ;i < 18 ;i++){
-                    let tmp = standard[i]-user[i]
-                    tmp = Math.pow(tmp, 2)
-                    value += tmp
+                    let gameCOV = standard[i]-user[i]
+                    gameCOV = Math.pow(gameCOV, 2)
+                    value += gameCOV
                 }
                 return Math.sqrt(value)
             }
@@ -139,86 +139,86 @@ const Page3 = (data) => {
 
             const game = NameTypeGame[count]
             
-            var CovarianceValue = []
+            // var CovarianceValue = []
 
-            function covariance(std1,std2){
-                let xbar = 0
-                let ybar = 0
-                let xmxbar = []
-                let ymybar = []
-                let cov = 0
-                for(let i = 0;i<18;i++){
-                    xbar += std1[i]
-                    ybar += std2[i]
-                }
-                xbar = xbar/18
-                ybar = ybar/18
-                for(let i = 0;i<18;i++){
-                    xmxbar.push(std1[i] - xbar)
-                    ymybar.push(std2[i] - ybar)
-                }
-                for(let i = 0;i<18;i++){
-                    cov += xmxbar[i] * ymybar[i]
-                }
-                return cov
+            // function covariance(std1,std2){
+            //     let xbar = 0
+            //     let ybar = 0
+            //     let xmxbar = []
+            //     let ymybar = []
+            //     let cov = 0
+            //     for(let i = 0;i<18;i++){
+            //         xbar += std1[i]
+            //         ybar += std2[i]
+            //     }
+            //     xbar = xbar/18
+            //     ybar = ybar/18
+            //     for(let i = 0;i<18;i++){
+            //         xmxbar.push(std1[i] - xbar)
+            //         ymybar.push(std2[i] - ybar)
+            //     }
+            //     for(let i = 0;i<18;i++){
+            //         cov += xmxbar[i] * ymybar[i]
+            //     }
+            //     return cov
                 
-            }
-            let tmp
+            // }
+            let gameCOV
             if (game === "Adventure")
-                tmp = Adventure
+                gameCOV = "Horror"
             else if (game === "Fighting")
-                tmp = Fighting
+                gameCOV = "RPG"
             else if (game === "Moba")
-                tmp = Moba
+                gameCOV = "Strategy"
             else if (game === "Puzzle")
-                tmp = Puzzle
+                gameCOV = "SurvivalHorror"
             else if (game === "RPG")
-                tmp = RPG
+                gameCOV = "Simulation"
             else if (game === "Shooting")
-                tmp = Shooting
+                gameCOV = "Moba"
             else if (game === "Sport")
-                tmp = Sport
+                gameCOV = "Puzzle"
             else if (game === "Simulation")
-                tmp = Simulation
+                gameCOV = "SurvivalHorror"
             else if (game === "Strategy")
-                tmp = Strategy
+                gameCOV = "Puzzle"
             else if (game === "SurvivalHorror")
-                tmp = SurvivalHorror
+                gameCOV = "Simulation"
 
 
-            CovarianceValue.push(covariance(Adventure,tmp))
-            CovarianceValue.push(covariance(Fighting,tmp))
-            CovarianceValue.push(covariance(Moba,tmp))
-            CovarianceValue.push(covariance(Puzzle,tmp))
-            CovarianceValue.push(covariance(RPG,tmp))
-            CovarianceValue.push(covariance(Shooting,tmp))
-            CovarianceValue.push(covariance(Sport,tmp))
-            CovarianceValue.push(covariance(Simulation,tmp))
-            CovarianceValue.push(covariance(Strategy,tmp))
-            CovarianceValue.push(covariance(SurvivalHorror,tmp))
+            // CovarianceValue.push(covariance(Adventure,gameCOV))
+            // CovarianceValue.push(covariance(Fighting,gameCOV))
+            // CovarianceValue.push(covariance(Moba,gameCOV))
+            // CovarianceValue.push(covariance(Puzzle,gameCOV))
+            // CovarianceValue.push(covariance(RPG,gameCOV))
+            // CovarianceValue.push(covariance(Shooting,gameCOV))
+            // CovarianceValue.push(covariance(Sport,gameCOV))
+            // CovarianceValue.push(covariance(Simulation,gameCOV))
+            // CovarianceValue.push(covariance(Strategy,gameCOV))
+            // CovarianceValue.push(covariance(SurvivalHorror,gameCOV))
 
-            var temp2 = []
-            for (let j = 0; j<10;j++){
-                temp2.push(CovarianceValue[j])
-            }
+            // var temp2 = []
+            // for (let j = 0; j<10;j++){
+            //     temp2.push(CovarianceValue[j])
+            // }
             // temp2.sort();
             // temp2.reverse();
-            console.log(tmp)
-            console.log(temp2)
-            var count2 = 0
-            for (let k = 0; k< 10;k++){
-                if (temp2[1] !== CovarianceValue[k]){
-                    count2 += 1
-                }
-                else{
-                    break
-                }
-            }
+            // console.log(gameCOV)
+            // console.log(temp2)
+            // var count2 = 0
+            // for (let k = 0; k< 10;k++){
+            //     if (temp2[1] !== CovarianceValue[k]){
+            //         count2 += 1
+            //     }
+            //     else{
+            //         break
+            //     }
+            // }
 
-            var gameCOV = NameTypeGame[count2]
-            if (game === "Shooting"){
-                gameCOV = "Fighting"
-            }
+            // var gameCOV = NameTypeGame[count2]
+            // if (game === "Shooting"){
+            //     gameCOV = "Fighting"
+            // }
 
             
 
