@@ -1,6 +1,6 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
-import axios from "axios"
+// import axios from "axios"
 import Loading from "../pic/Loading.gif"
 
 import e1 from "../pic/e1n.png"
