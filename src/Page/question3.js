@@ -224,15 +224,20 @@ const Page3 = (data) => {
 
             const datacomplete = [game , name, gameCOV]
 
-            axios.post("https://backend-linear.herokuapp.com/api/data", {
-                dataName: name,
-                dataGameEUC: game,
-                dataGameCOV: gameCOV,
-            }).then(()=>{
-                history.push({
-                    pathname: "/result",
-                    state: datacomplete
-                })
+            // axios.post("https://backend-linear.herokuapp.com/api/data", {
+            //     dataName: name,
+            //     dataGameEUC: game,
+            //     dataGameCOV: gameCOV,
+            // }).then(()=>{
+            //     history.push({
+            //         pathname: "/result",
+            //         state: datacomplete
+            //     })
+            // })
+
+            history.push({
+                pathname: "/result",
+                state: datacomplete
             })
         }
     }   

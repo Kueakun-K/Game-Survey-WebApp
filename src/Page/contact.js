@@ -19,7 +19,7 @@ return(
             <img src={kit} alt="kit" />
             <p className = "fontNameCT">Kritsanaphat Phanjaroen</p>
         </div> 
-        <div class="contentCT"> 
+        <div className="contentCT"> 
                 
                 <a href="https://www.instagram.com/ksnppjr" target="blank" >
                     <img src={ig} alt="ig"/>
